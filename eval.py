@@ -26,11 +26,11 @@ data_loader = MultiClassDataLoader(tf.flags, WordDataProcessor())
 data_loader.define_flags()
 
 FLAGS = tf.flags.FLAGS
-FLAGS._parse_flags()
-print("\nParameters:")
-for attr, value in sorted(FLAGS.__flags.items()):
-    print("{}={}".format(attr.upper(), value))
-print("")
+# FLAGS._parse_flags()
+# print("\nParameters:")
+# for attr, value in sorted(FLAGS.__flags.items()):
+#     print("{}={}".format(attr.upper(), value))
+# print("")
 
 if FLAGS.eval_train:
     x_raw, y_test = data_loader.load_data_and_labels()
